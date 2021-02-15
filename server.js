@@ -1,10 +1,11 @@
 const express = require("express");
 const { ApolloServer } = require("apollo-server-express");
 const cors = require("cors");
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
+const ctx = require("./utils/context");
 
-const typeDefs = require('./graphql/schema')
-const resolvers = require('./graphql/resolvers')
+const typeDefs = require("./graphql/schema");
+const resolvers = require("./graphql/resolvers");
 
 require("dotenv").config();
 
@@ -14,25 +15,32 @@ app.use(cors());
 const PORT = process.env.PORT || 8000;
 
 const server = new ApolloServer({
-    typeDefs,
-    resolvers,
+  typeDefs,
+  resolvers,
+  context: ctx
 });
-  
+
 app.get("/", (_, res) => {
   res.send(`Hello World 👋 from ${process.env.AUTHOR}`);
 });
 
 server.applyMiddleware({ app });
-mongoose.connect(process.env.MONGODB, {
+mongoose.connect(
+  process.env.MONGODB,
+  {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
     useCreateIndex: true,
-}, () => {
-    console.log('Database connected 😇')
-})
+  },
+  () => {
+    console.log("Database connected 😇");
+  }
+);
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
-  console.log(`🚀 Graphql Server running at http://localhost:${PORT}${server.graphqlPath}`);
+  console.log(
+    `🚀 Graphql Server running at http://localhost:${PORT}${server.graphqlPath}`
+  );
 });
