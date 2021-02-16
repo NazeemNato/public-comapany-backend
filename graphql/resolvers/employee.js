@@ -18,10 +18,13 @@ const resolvers = {
           throw new AuthenticationError("Unauthenticated");
         }
         const createdBy = context.email["email"];
-        const { fullName, department, role, salary, joinedYear } = args;
+        const { fullName,picture, department, role, salary, joinedYear } = args;
 
         if (fullName.trim() === "") {
           errors.fullName = "Name must not be empty";
+        }
+        if (picture.trim() === "") {
+          errors.picture = "Picture must not be empty";
         }
         if (department.trim() === "") {
           errors.department = "Department must not be empty";
@@ -34,6 +37,7 @@ const resolvers = {
         }
         const newEmployee = Employee({
           fullName,
+          picture,
           department,
           role,
           salary,
@@ -64,7 +68,6 @@ const resolvers = {
           errors.message = "Invalid User ID";
           throw new UserInputError("Bad inputs", { errors });
         }
-        console.log(message);
         return { output: "Done" };
       } catch (err) {
         throw err;
