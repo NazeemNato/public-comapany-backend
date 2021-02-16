@@ -5,6 +5,10 @@ const EmployeeSchema = mongoose.Schema({
     type: String,
     require: true,
   },
+  picture: {
+    type: String,
+    require: true
+  },
   department: {
     type: String,
     require: true,

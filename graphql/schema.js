@@ -4,6 +4,7 @@ const typeDefs = gql`
 
   type Employee {
     id: ID
+    picture: String!
     fullName: String!
     department: String!
     role: String!
@@ -28,6 +29,7 @@ const typeDefs = gql`
     register(name: String!, email: String!, password: String!): User!
     addEmployee(
       fullName: String!
+      picture: String!
       department: String!
       role: String
       salary: Float
