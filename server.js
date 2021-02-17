@@ -33,14 +33,14 @@ mongoose.connect(
     useFindAndModify: false,
     useCreateIndex: true,
   },
-  () => {
-    console.log("Database connected 😇");
-  }
-);
-
-app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
-  console.log(
+).then(() => {
+  console.log("✅ Database connected");
+  return app.listen(PORT, (req) => {
+    console.log(`🚀 Server running at http://localhost:${PORT}`);
+      console.log(
     `🚀 Graphql Server running at http://localhost:${PORT}${server.graphqlPath}`
   );
-});
+  })
+}).catch((e) => {
+  console.log(e);
+})
