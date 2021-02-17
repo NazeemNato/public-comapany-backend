@@ -6,7 +6,7 @@ dependencies:
   express: 4.17.1
   graphql: 15.5.0
   jsonwebtoken: 8.5.1
-  mongoose: 5.11.16
+  mongoose: 5.11.15
   validator: 13.5.2
 devDependencies:
   nodemon: 2.0.7
@@ -1625,7 +1625,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
-  /mongodb/3.6.4:
+  /mongodb/3.6.3:
     dependencies:
       bl: 2.2.1
       bson: 1.1.5
@@ -1658,24 +1658,24 @@ packages:
       snappy:
         optional: true
     resolution:
-      integrity: sha512-Y+Ki9iXE9jI+n9bVtbTOOdK0B95d6wVGSucwtBkvQ+HIvVdTCfpVRp01FDC24uhC/Q2WXQ8Lpq3/zwtB5Op9Qw==
-  /mongoose-legacy-pluralize/1.0.2_mongoose@5.11.16:
+      integrity: sha512-rOZuR0QkodZiM+UbQE5kDsJykBqWi0CL4Ec2i1nrGrUI3KO11r6Fbxskqmq3JK2NH7aW4dcccBuUujAP0ERl5w==
+  /mongoose-legacy-pluralize/1.0.2_mongoose@5.11.15:
     dependencies:
-      mongoose: 5.11.16
+      mongoose: 5.11.15
     dev: false
     peerDependencies:
       mongoose: '*'
     resolution:
       integrity: sha512-Yo/7qQU4/EyIS8YDFSeenIvXxZN+ld7YdV9LqFVQJzTLye8unujAWPZ4NWKfFA+RNjh+wvTWKY9Z3E5XM6ZZiQ==
-  /mongoose/5.11.16:
+  /mongoose/5.11.15:
     dependencies:
       '@types/mongodb': 3.6.7
       bson: 1.1.5
       kareem: 2.3.2
-      mongodb: 3.6.4
-      mongoose-legacy-pluralize: 1.0.2_mongoose@5.11.16
+      mongodb: 3.6.3
+      mongoose-legacy-pluralize: 1.0.2_mongoose@5.11.15
       mpath: 0.8.3
-      mquery: 3.2.4
+      mquery: 3.2.3
       ms: 2.1.2
       regexp-clone: 1.0.0
       safe-buffer: 5.2.1
@@ -1685,14 +1685,14 @@ packages:
     engines:
       node: '>=4.0.0'
     resolution:
-      integrity: sha512-qmolyGAskPuq0Xr3j2Tjm9jwRccGGnLRWtTuyRvYBZoyItajwIoQdetJH8oVzs3N7aZK/GKZ82xV/t97suF8Pg==
+      integrity: sha512-8T4bT6eCGB7MqCm40oVhnhT/1AyAdwe+y1rYUhdl3ljsks3BpYz8whZgcMkIoh6VoCCjipOXRqZqdk1UByvlYA==
   /mpath/0.8.3:
     dev: false
     engines:
       node: '>=4.0.0'
     resolution:
       integrity: sha512-eb9rRvhDltXVNL6Fxd2zM9D4vKBxjVVQNLNijlj7uoXUy19zNDsIif5zR+pWmPCWNKwAtqyo4JveQm4nfD5+eA==
-  /mquery/3.2.4:
+  /mquery/3.2.3:
     dependencies:
       bluebird: 3.5.1
       debug: 3.1.0
@@ -1703,7 +1703,7 @@ packages:
     engines:
       node: '>=4.0.0'
     resolution:
-      integrity: sha512-uOLpp7iRX0BV1Uu6YpsqJ5b42LwYnmu0WeF/f8qgD/On3g0XDaQM6pfn0m6UxO6SM8DioZ9Bk6xxbWIGHm2zHg==
+      integrity: sha512-cIfbP4TyMYX+SkaQ2MntD+F2XbqaBHUYWk3j+kqdDztPWok3tgyssOZxMHMtzbV1w9DaSlvEea0Iocuro41A4g==
   /ms/2.0.0:
     resolution:
       integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
@@ -2433,6 +2433,6 @@ specifiers:
   express: ^4.17.1
   graphql: ^15.5.0
   jsonwebtoken: ^8.5.1
-  mongoose: ^5.11.16
+  mongoose: 5.11.15
   nodemon: ^2.0.7
   validator: ^13.5.2
